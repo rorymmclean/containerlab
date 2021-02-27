@@ -1,0 +1,19 @@
+.sample-form {
+  background-color: #fff;
+  padding: 30px 40px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
+  .sample-form h3 {
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: normal; }
+  .sample-form .description {
+    margin-bottom: 20px;
+    font-size: 0.9375rem; }
+  .sample-form label {
+    font-weight: normal;
+    margin-bottom: 10px; }
+  .sample-form .input-group {
+    margin-bottom: 20px; }
+  .sample-form textarea {
+    height: 120px; }

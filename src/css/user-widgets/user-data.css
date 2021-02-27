@@ -1,0 +1,13 @@
+.user-data .title {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  margin-bottom: 10px; }
+
+.user-data .subtitle,
+.user-data .description,
+.user-data .location {
+  font-size: 0.8125rem;
+  margin-bottom: 10px; }
+
+.user-data .location i {
+  margin-right: 10px; }

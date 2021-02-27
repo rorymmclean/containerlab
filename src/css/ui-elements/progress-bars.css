@@ -1,0 +1,28 @@
+.sample-progress-bars .progress {
+  margin-bottom: 20px; }
+
+.progress {
+  line-height: 12px;
+  height: 12px;
+  font-weight: bold; }
+  .progress .progress-bar {
+    height: 2rem; }
+  .progress.progress-sm {
+    line-height: 6px;
+    height: 6px; }
+    .progress.progress-sm .progress-bar {
+      height: 6px; }
+  .progress.progress-lg {
+    line-height: 18px;
+    height: 18px; }
+    .progress.progress-lg .progress-bar {
+      height: 18px; }
+
+[data-background="light"] .progress {
+  background-color: #ffffff; }
+
+[data-background="dark"] .progress {
+  background-color: #212121; }
+
+[data-background="primary"] .progress {
+  background-color: #303f9f; }

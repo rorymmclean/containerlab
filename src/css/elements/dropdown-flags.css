@@ -1,0 +1,13 @@
+.nav-item-dropdown .navbar-dropdown.dropdown-flags {
+  margin-left: -200px;
+  width: 240px !important; }
+  .nav-item-dropdown .navbar-dropdown.dropdown-flags .dropdown-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .nav-item-dropdown .navbar-dropdown.dropdown-flags .dropdown-inner .dropdown-item {
+      width: 50% !important; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-flags .dropdown-inner .dropdown-item .flag {
+        margin-right: 10px; }

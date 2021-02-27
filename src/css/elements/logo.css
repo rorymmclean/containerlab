@@ -1,0 +1,42 @@
+.navbar .logo {
+  height: 70px; }
+  .navbar .logo i {
+    font-size: 1.75rem;
+    margin-right: 15px;
+    margin-left: 5px; }
+  .navbar .logo .title {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: normal; }
+
+[data-logo="light"] .navbar .logo {
+  background: #ffffff;
+  color: #212121; }
+
+[data-logo="dark"] .navbar .logo {
+  background: #212121;
+  color: #ffffff; }
+
+[data-logo="primary"] .navbar .logo {
+  background: #303f9f;
+  color: #ffffff; }
+
+[data-logo="secondary"] .navbar .logo {
+  background: #7b1fa2;
+  color: #ffffff; }
+
+[data-logo="info"] .navbar .logo {
+  background: #0288d1;
+  color: #ffffff; }
+
+[data-logo="success"] .navbar .logo {
+  background: #388e3c;
+  color: #ffffff; }
+
+[data-logo="warning"] .navbar .logo {
+  background: #ffa000;
+  color: #ffffff; }
+
+[data-logo="danger"] .navbar .logo {
+  background: #d32f2f;
+  color: #ffffff; }

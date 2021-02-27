@@ -1,0 +1,16 @@
+.activity-widget-2 {
+  padding: 10px; }
+  .activity-widget-2 .title,
+  .activity-widget-2 .number {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px; }
+  .activity-widget-2 .subtitle,
+  .activity-widget-2 .percent {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 10px; }
+    .activity-widget-2 .subtitle i,
+    .activity-widget-2 .percent i {
+      padding-left: 10px;
+      font-size: 1.125rem; }

@@ -1,0 +1,91 @@
+[data-layout="top-navigation-1"] .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1032;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 20px;
+  transform: translate3d(0, 0, 0); }
+  [data-layout="top-navigation-1"] .navbar .logo {
+    padding-left: 20px;
+    width: 280px; }
+
+[data-layout="top-navigation-1"] .top-navigation {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 1031;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 20px;
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
+
+[data-layout="top-navigation-1"] .main {
+  padding-top: 160px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transform: translate3d(0, 0, 0); }
+  [data-layout="top-navigation-1"] .main .jumbotron {
+    width: 100%;
+    margin: 0; }
+  [data-layout="top-navigation-1"] .main > .row {
+    margin-bottom: 20px;
+    padding-bottom: 0; }
+
+@media (max-width: 575px) {
+  [data-layout="top-navigation-1"][data-collapsed] .navbar, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    left: 0; }
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .nav-inline-1,
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .nav-inline-2,
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .navbar-search-form, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .nav-inline-1,
+    [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .nav-inline-2,
+    [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .navbar-search-form {
+      display: none; }
+  [data-layout="top-navigation-1"][data-collapsed] .main, [data-layout="top-navigation-1"][data-collapsed="false"] .main {
+    padding-left: 20px;
+    transform: translate3d(0, 0, 0); }
+    [data-layout="top-navigation-1"][data-collapsed] .main .shipping-status, [data-layout="top-navigation-1"][data-collapsed="false"] .main .shipping-status {
+      display: none; }
+    [data-layout="top-navigation-1"][data-collapsed] .main .jumbotron .jumbotron-actions, [data-layout="top-navigation-1"][data-collapsed="false"] .main .jumbotron .jumbotron-actions {
+      display: none; } }
+
+@media (max-width: 767px) {
+  [data-layout="top-navigation-1"][data-collapsed] .navbar, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    left: 0; }
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .nav-inline-2,
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .navbar-search-form, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .nav-inline-2,
+    [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .navbar-search-form {
+      display: none; }
+  [data-layout="top-navigation-1"][data-collapsed] .main, [data-layout="top-navigation-1"][data-collapsed="false"] .main {
+    padding-left: 20px;
+    transform: translate3d(0, 0, 0); } }
+
+@media (max-width: 991px) {
+  [data-layout="top-navigation-1"][data-collapsed] .navbar, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    left: 0; }
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .navbar-search-form, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .navbar-search-form {
+      display: none; }
+  [data-layout="top-navigation-1"][data-collapsed] .main, [data-layout="top-navigation-1"][data-collapsed="false"] .main {
+    padding-left: 20px;
+    transform: translate3d(0, 0, 0); } }
+
+@media (max-width: 1199px) {
+  [data-layout="top-navigation-1"][data-collapsed] .navbar, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    left: 0; }
+    [data-layout="top-navigation-1"][data-collapsed] .navbar .navbar-search-form, [data-layout="top-navigation-1"][data-collapsed="false"] .navbar .navbar-search-form {
+      display: none; }
+  [data-layout="top-navigation-1"][data-collapsed] .main, [data-layout="top-navigation-1"][data-collapsed="false"] .main {
+    padding-left: 20px;
+    transform: translate3d(0, 0, 0); } }

@@ -1,0 +1,8 @@
+.text-widget-10 {
+  padding: 10px; }
+  .text-widget-10.bg-transparent {
+    padding: 0; }
+  .text-widget-10 .title {
+    font-size: 0.8125rem; }
+  .text-widget-10 .subtitle {
+    font-size: 1rem; }

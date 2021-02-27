@@ -1,0 +1,44 @@
+.sidebar-heading.sidebar-heading-1 {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  text-align: center;
+  text-transform: capitalize;
+  z-index: 1; }
+  [data-layout="collapsed-sidebar-1"] .sidebar-heading.sidebar-heading-1 {
+    display: none; }
+
+[data-left-sidebar="light"] .sidebar-heading {
+  background-color: #ffffff;
+  color: #212121; }
+
+[data-left-sidebar="dark"] .sidebar-heading {
+  background-color: #212121;
+  color: #ffffff; }
+
+[data-left-sidebar="primary"] .sidebar-heading {
+  background-color: #303f9f;
+  color: #ffffff; }
+
+[data-left-sidebar="secondary"] .sidebar-heading {
+  background-color: #7b1fa2;
+  color: #ffffff; }
+
+[data-left-sidebar="info"] .sidebar-heading {
+  background-color: #0288d1;
+  color: #ffffff; }
+
+[data-left-sidebar="success"] .sidebar-heading {
+  background-color: #388e3c;
+  color: #ffffff; }
+
+[data-left-sidebar="warning"] .sidebar-heading {
+  background-color: #ffa000;
+  color: #ffffff; }
+
+[data-left-sidebar="danger"] .sidebar-heading {
+  background-color: #d32f2f;
+  color: #ffffff; }

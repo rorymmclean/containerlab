@@ -1,0 +1,16 @@
+.icon-widget-9 {
+  padding: 15px; }
+  .icon-widget-9 .number {
+    padding-top: 3px;
+    font-weight: 400;
+    font-size: 1.125rem; }
+  .icon-widget-9 .text {
+    font-size: 0.8125rem; }
+  .icon-widget-9 .btn {
+    cursor: none;
+    pointer-events: none; }
+    .icon-widget-9 .btn i {
+      font-weight: 400;
+      font-size: 1.5rem; }
+  .icon-widget-9 .list-group .list-group-item {
+    border: 0; }

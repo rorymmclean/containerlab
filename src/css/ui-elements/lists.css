@@ -1,0 +1,137 @@
+.list-group .list-group-item {
+  display: flex; }
+  .list-group .list-group-item.active {
+    background: #303f9f;
+    border-color: #303f9f;
+    color: #fff; }
+  .list-group .list-group-item.list-group-item-light.active {
+    background: #ffffff; }
+  .list-group .list-group-item.list-group-item-dark.active {
+    background: #212121; }
+  .list-group .list-group-item.list-group-item-default.active {
+    background: #212121; }
+  .list-group .list-group-item.list-group-item-primary.active {
+    background: #303f9f; }
+  .list-group .list-group-item.list-group-item-secondary.active {
+    background: #7b1fa2; }
+  .list-group .list-group-item.list-group-item-info.active {
+    background: #0288d1; }
+  .list-group .list-group-item.list-group-item-success.active {
+    background: #388e3c; }
+  .list-group .list-group-item.list-group-item-warning.active {
+    background: #ffa000; }
+  .list-group .list-group-item.list-group-item-danger.active {
+    background: #d32f2f; }
+  .list-group .list-group-item .row {
+    width: 100%; }
+
+.list-group .list-group-item-heading,
+.list-group .list-group-item-text {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; }
+  .list-group .list-group-item-heading:last-child,
+  .list-group .list-group-item-text:last-child {
+    margin-bottom: 0; }
+
+.list-group .list-group-item {
+  padding: 0.5rem 1rem; }
+
+.list-group.list-group-lg .list-group-item {
+  padding: 0.6rem 1.2rem; }
+
+.list-group.list-group-sm .list-group-item {
+  padding: 0.4rem 0.8rem; }
+
+[data-background="light"] .list-group-item {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  color: #212121; }
+  [data-background="light"] .list-group-item p {
+    color: #212121; }
+  [data-background="light"] .list-group-item.active {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: #fff; }
+    [data-background="light"] .list-group-item.active p {
+      color: #fff; }
+  [data-background="light"] .list-group-item.disabled {
+    background-color: #e0e0e0; }
+  [data-background="light"] .list-group-item:nth-child(even):not(.active) {
+    background-color: #f0f0f0;
+    border-color: #e0e0e0; }
+  [data-background="light"] .list-group-item.list-group-item-action:not(.active) .list-group-item-heading,
+  [data-background="light"] .list-group-item.list-group-item-action:not(.active) .list-group-item-text {
+    color: #212121; }
+
+[data-background="light"] .list-group.unstriped .list-group-item:nth-child(even):not(.active), [data-background="light"] .list-group.not-striped .list-group-item:nth-child(even):not(.active) {
+  background-color: #ffffff; }
+
+[data-background="light"] .list-group.not-bordered .list-group-item, [data-background="light"] .list-group.unbordered .list-group-item {
+  border: 0; }
+  [data-background="light"] .list-group.not-bordered .list-group-item:active, [data-background="light"] .list-group.unbordered .list-group-item:active {
+    border: 0; }
+  [data-background="light"] .list-group.not-bordered .list-group-item:nth-child(odd), [data-background="light"] .list-group.not-bordered .list-group-item:nth-child(odd):not(.active), [data-background="light"] .list-group.not-bordered .list-group-item:nth-child(even), [data-background="light"] .list-group.not-bordered .list-group-item:nth-child(even):not(.active), [data-background="light"] .list-group.unbordered .list-group-item:nth-child(odd), [data-background="light"] .list-group.unbordered .list-group-item:nth-child(odd):not(.active), [data-background="light"] .list-group.unbordered .list-group-item:nth-child(even), [data-background="light"] .list-group.unbordered .list-group-item:nth-child(even):not(.active) {
+    border: 0; }
+
+[data-background="dark"] .list-group-item {
+  background-color: #212121;
+  border-color: #404040;
+  color: #ffffff; }
+  [data-background="dark"] .list-group-item p {
+    color: #ffffff; }
+  [data-background="dark"] .list-group-item.active {
+    background: #ffa000;
+    border-color: #ffa000;
+    color: #fff; }
+    [data-background="dark"] .list-group-item.active p {
+      color: #fff; }
+  [data-background="dark"] .list-group-item.disabled {
+    background-color: #404040; }
+  [data-background="dark"] .list-group-item:nth-child(even):not(.active) {
+    background-color: #303030;
+    border-color: #404040; }
+  [data-background="dark"] .list-group-item.list-group-item-action:not(.active) .list-group-item-heading,
+  [data-background="dark"] .list-group-item.list-group-item-action:not(.active) .list-group-item-text {
+    color: #ffffff; }
+
+[data-background="dark"] .list-group.unstriped .list-group-item:nth-child(even):not(.active), [data-background="dark"] .list-group.not-striped .list-group-item:nth-child(even):not(.active) {
+  background-color: #212121; }
+
+[data-background="dark"] .list-group.not-bordered .list-group-item, [data-background="dark"] .list-group.unbordered .list-group-item {
+  border: 0; }
+  [data-background="dark"] .list-group.not-bordered .list-group-item:active, [data-background="dark"] .list-group.unbordered .list-group-item:active {
+    border: 0; }
+  [data-background="dark"] .list-group.not-bordered .list-group-item:nth-child(odd), [data-background="dark"] .list-group.not-bordered .list-group-item:nth-child(odd):not(.active), [data-background="dark"] .list-group.not-bordered .list-group-item:nth-child(even), [data-background="dark"] .list-group.not-bordered .list-group-item:nth-child(even):not(.active), [data-background="dark"] .list-group.unbordered .list-group-item:nth-child(odd), [data-background="dark"] .list-group.unbordered .list-group-item:nth-child(odd):not(.active), [data-background="dark"] .list-group.unbordered .list-group-item:nth-child(even), [data-background="dark"] .list-group.unbordered .list-group-item:nth-child(even):not(.active) {
+    border: 0; }
+
+[data-background="primary"] .list-group-item {
+  background-color: #303f9f;
+  border-color: #4557c7;
+  color: #ffffff; }
+  [data-background="primary"] .list-group-item p {
+    color: #ffffff; }
+  [data-background="primary"] .list-group-item.active {
+    background: #ffa000;
+    border-color: #ffa000;
+    color: #fff; }
+    [data-background="primary"] .list-group-item.active p {
+      color: #fff; }
+  [data-background="primary"] .list-group-item.disabled {
+    background-color: #4557c7; }
+  [data-background="primary"] .list-group-item:nth-child(even):not(.active) {
+    background-color: #3748b7;
+    border-color: #4557c7; }
+  [data-background="primary"] .list-group-item.list-group-item-action:not(.active) .list-group-item-heading,
+  [data-background="primary"] .list-group-item.list-group-item-action:not(.active) .list-group-item-text {
+    color: #ffffff; }
+
+[data-background="primary"] .list-group.unstriped .list-group-item:nth-child(even):not(.active), [data-background="primary"] .list-group.not-striped .list-group-item:nth-child(even):not(.active) {
+  background-color: #303f9f; }
+
+[data-background="primary"] .list-group.not-bordered .list-group-item, [data-background="primary"] .list-group.unbordered .list-group-item {
+  border: 0; }
+  [data-background="primary"] .list-group.not-bordered .list-group-item:active, [data-background="primary"] .list-group.unbordered .list-group-item:active {
+    border: 0; }
+  [data-background="primary"] .list-group.not-bordered .list-group-item:nth-child(odd), [data-background="primary"] .list-group.not-bordered .list-group-item:nth-child(odd):not(.active), [data-background="primary"] .list-group.not-bordered .list-group-item:nth-child(even), [data-background="primary"] .list-group.not-bordered .list-group-item:nth-child(even):not(.active), [data-background="primary"] .list-group.unbordered .list-group-item:nth-child(odd), [data-background="primary"] .list-group.unbordered .list-group-item:nth-child(odd):not(.active), [data-background="primary"] .list-group.unbordered .list-group-item:nth-child(even), [data-background="primary"] .list-group.unbordered .list-group-item:nth-child(even):not(.active) {
+    border: 0; }

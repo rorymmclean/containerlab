@@ -1,0 +1,38 @@
+.font-awesome-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  .font-awesome-icons .icon {
+    text-align: center;
+    width: 150px;
+    min-height: 100px;
+    padding: 20px 0;
+    margin-bottom: 20px; }
+    .font-awesome-icons .icon i {
+      margin: 0 5px; }
+    .font-awesome-icons .icon .icons {
+      display: block;
+      margin-bottom: 20px; }
+    .font-awesome-icons .icon .icon-class {
+      display: block;
+      font-size: 13px; }
+
+[data-background="light"] .font-awesome-icons .icon {
+  color: #212121; }
+  [data-background="light"] .font-awesome-icons .icon i,
+  [data-background="light"] .font-awesome-icons .icon .icon-class {
+    color: #212121; }
+
+[data-background="dark"] .font-awesome-icons .icon {
+  color: #ffffff; }
+  [data-background="dark"] .font-awesome-icons .icon i,
+  [data-background="dark"] .font-awesome-icons .icon .icon-class {
+    color: #ffffff; }
+
+[data-background="primary"] .font-awesome-icons .icon {
+  color: #ffffff; }
+  [data-background="primary"] .font-awesome-icons .icon i,
+  [data-background="primary"] .font-awesome-icons .icon .icon-class {
+    color: #ffffff; }

@@ -1,0 +1,11 @@
+.icon-widget-5 {
+  padding: 10px; }
+  .icon-widget-5 i {
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 24px; }
+  .icon-widget-5 .text {
+    white-space: nowrap;
+    font-size: 0.875rem; }
+  .icon-widget-5 .number {
+    font-size: 1.125rem; }

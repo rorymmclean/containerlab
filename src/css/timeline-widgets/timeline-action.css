@@ -1,0 +1,10 @@
+.timeline-action {
+  font-size: 0.8125rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .timeline-action .text,
+  .timeline-action i {
+    margin-right: 10px; }

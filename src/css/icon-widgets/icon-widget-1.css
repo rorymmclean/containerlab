@@ -1,0 +1,9 @@
+.icon-widget-1 {
+  padding: 15px 10px; }
+  .icon-widget-1 i {
+    vertical-align: middle;
+    display: inline-flex;
+    margin-right: 8px; }
+  .icon-widget-1 .text {
+    vertical-align: middle;
+    display: inline-flex; }

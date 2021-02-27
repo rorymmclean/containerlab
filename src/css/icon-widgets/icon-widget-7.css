@@ -1,0 +1,15 @@
+.icon-widget-7 {
+  padding: 10px; }
+  .icon-widget-7.bg-transparent {
+    padding: 0; }
+  .icon-widget-7 .number {
+    font-weight: 400;
+    font-size: 1.125rem; }
+  .icon-widget-7 .text {
+    font-size: 0.8125rem; }
+  .icon-widget-7 .btn {
+    cursor: none;
+    pointer-events: none; }
+  .icon-widget-7 i {
+    font-weight: 400;
+    font-size: 1.5rem; }

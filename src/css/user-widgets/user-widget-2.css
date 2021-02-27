@@ -1,0 +1,24 @@
+.user-widget-2 .media {
+  margin-bottom: 20px; }
+
+.user-widget-2 h5 {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  margin-bottom: 10px; }
+
+.user-widget-2 p {
+  font-size: 0.8125rem;
+  margin-bottom: 10px; }
+  .user-widget-2 p .badge {
+    margin-right: 10px; }
+
+.user-widget-2 i {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.user-widget-2 .rounded-circle {
+  border: 3px solid #fff;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  margin-right: 20px; }

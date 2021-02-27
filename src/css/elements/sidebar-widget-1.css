@@ -1,0 +1,65 @@
+.sidebar-widget-1 {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+  .sidebar-widget-1 .section-title {
+    margin-bottom: 10px; }
+  .sidebar-widget-1 .project-status {
+    padding: 0 25px; }
+    .sidebar-widget-1 .project-status > .row {
+      margin-bottom: 20px; }
+      .sidebar-widget-1 .project-status > .row p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        white-space: nowrap; }
+      .sidebar-widget-1 .project-status > .row:last-child {
+        margin-bottom: 0; }
+  [data-collapsed="true"] .sidebar-widget-1 {
+    display: none; }
+
+[data-left-sidebar="light"] .sidebar-widget-1 {
+  background: #ffffff;
+  color: #212121; }
+  [data-left-sidebar="light"] .sidebar-widget-1 .progress {
+    background-color: #ffffff; }
+
+[data-left-sidebar="dark"] .sidebar-widget-1 {
+  background: #212121;
+  color: #ffffff; }
+  [data-left-sidebar="dark"] .sidebar-widget-1 .progress {
+    background-color: #212121; }
+
+[data-left-sidebar="primary"] .sidebar-widget-1 {
+  background: #303f9f;
+  color: #ffffff; }
+  [data-left-sidebar="primary"] .sidebar-widget-1 .progress {
+    background-color: #303f9f; }
+
+[data-left-sidebar="secondary"] .sidebar-widget-1 {
+  background: #7b1fa2;
+  color: #ffffff; }
+  [data-left-sidebar="secondary"] .sidebar-widget-1 .progress {
+    background-color: #7b1fa2; }
+
+[data-left-sidebar="info"] .sidebar-widget-1 {
+  background: #0288d1;
+  color: #ffffff; }
+  [data-left-sidebar="info"] .sidebar-widget-1 .progress {
+    background-color: #0288d1; }
+
+[data-left-sidebar="success"] .sidebar-widget-1 {
+  background: #388e3c;
+  color: #ffffff; }
+  [data-left-sidebar="success"] .sidebar-widget-1 .progress {
+    background-color: #388e3c; }
+
+[data-left-sidebar="warning"] .sidebar-widget-1 {
+  background: #ffa000;
+  color: #ffffff; }
+  [data-left-sidebar="warning"] .sidebar-widget-1 .progress {
+    background-color: #ffa000; }
+
+[data-left-sidebar="danger"] .sidebar-widget-1 {
+  background: #d32f2f;
+  color: #ffffff; }
+  [data-left-sidebar="danger"] .sidebar-widget-1 .progress {
+    background-color: #d32f2f; }

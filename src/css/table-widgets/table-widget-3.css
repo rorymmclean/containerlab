@@ -1,0 +1,10 @@
+.table-widget-3 .table td:last-child {
+  font-weight: normal;
+  text-align: right; }
+
+.table-widget-3 .table td .rounded-circle {
+  max-width: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }

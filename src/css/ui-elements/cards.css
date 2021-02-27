@@ -1,0 +1,221 @@
+.card {
+  font-size: 0.875rem;
+  position: relative; }
+  .card .card-header {
+    font-size: 0.9375rem;
+    font-weight: normal; }
+  .card .card-title {
+    font-size: 0.9375rem;
+    font-weight: normal; }
+  .card .card-subtitle {
+    font-size: 0.875rem;
+    font-weight: 500; }
+  .card .card-title,
+  .card .card-subtitle,
+  .card .card-text,
+  .card p,
+  .card small,
+  .card footer {
+    display: block;
+    margin-bottom: 10px; }
+  .card small {
+    font-size: 0.8125rem; }
+  .card .card-actions {
+    margin-bottom: 0;
+    font-weight: normal; }
+    .card .card-actions > span,
+    .card .card-actions > i {
+      margin-right: 10px; }
+    .card .card-actions > span {
+      font-size: 0.8125rem; }
+  .card .card-block {
+    position: relative; }
+    .card .card-block .card-img-user {
+      width: 100%;
+      position: absolute;
+      top: -35px;
+      left: calc(100% - 85px);
+      display: block; }
+      .card .card-block .card-img-user .rounded-circle {
+        max-width: 70px;
+        width: 70px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #fff;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        z-index: 1; }
+  .card.card-with-badge .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-columns {
+    column-count: 2; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-columns {
+    column-count: 2; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card-columns {
+    column-count: 3; } }
+
+[data-background="light"] .card {
+  background: #f7f7f7;
+  border-color: #f7f7f7;
+  color: #212121; }
+  [data-background="light"] .card .card-header {
+    background: #f7f7f7;
+    border-color: #f7f7f7;
+    color: #212121; }
+  [data-background="light"] .card.card-inverse {
+    background: #212121;
+    border-color: #212121;
+    color: #f7f7f7; }
+    [data-background="light"] .card.card-inverse .card-header {
+      background: #212121;
+      border-color: #212121;
+      color: #f7f7f7; }
+  [data-background="light"] .card.card-light {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #fff; }
+  [data-background="light"] .card.card-dark {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="light"] .card.card-default {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="light"] .card.card-primary {
+    background: #303f9f;
+    border-color: #303f9f;
+    color: #fff; }
+  [data-background="light"] .card.card-secondary {
+    background: #7b1fa2;
+    border-color: #7b1fa2;
+    color: #fff; }
+  [data-background="light"] .card.card-info {
+    background: #0288d1;
+    border-color: #0288d1;
+    color: #fff; }
+  [data-background="light"] .card.card-success {
+    background: #388e3c;
+    border-color: #388e3c;
+    color: #fff; }
+  [data-background="light"] .card.card-warning {
+    background: #ffa000;
+    border-color: #ffa000;
+    color: #fff; }
+  [data-background="light"] .card.card-danger {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: #fff; }
+
+[data-background="dark"] .card {
+  background: #292929;
+  border-color: #292929;
+  color: #ffffff; }
+  [data-background="dark"] .card .card-header {
+    background: #292929;
+    border-color: #292929;
+    color: #ffffff; }
+  [data-background="dark"] .card.card-inverse {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #292929; }
+    [data-background="dark"] .card.card-inverse .card-header {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #292929; }
+  [data-background="dark"] .card.card-light {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #fff; }
+  [data-background="dark"] .card.card-dark {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="dark"] .card.card-default {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="dark"] .card.card-primary {
+    background: #303f9f;
+    border-color: #303f9f;
+    color: #fff; }
+  [data-background="dark"] .card.card-secondary {
+    background: #7b1fa2;
+    border-color: #7b1fa2;
+    color: #fff; }
+  [data-background="dark"] .card.card-info {
+    background: #0288d1;
+    border-color: #0288d1;
+    color: #fff; }
+  [data-background="dark"] .card.card-success {
+    background: #388e3c;
+    border-color: #388e3c;
+    color: #fff; }
+  [data-background="dark"] .card.card-warning {
+    background: #ffa000;
+    border-color: #ffa000;
+    color: #fff; }
+  [data-background="dark"] .card.card-danger {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: #fff; }
+
+[data-background="primary"] .card {
+  background: #3444ab;
+  border-color: #3444ab;
+  color: #ffffff; }
+  [data-background="primary"] .card .card-header {
+    background: #3444ab;
+    border-color: #3444ab;
+    color: #ffffff; }
+  [data-background="primary"] .card.card-inverse {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #3444ab; }
+    [data-background="primary"] .card.card-inverse .card-header {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #3444ab; }
+  [data-background="primary"] .card.card-light {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #fff; }
+  [data-background="primary"] .card.card-dark {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="primary"] .card.card-default {
+    background: #212121;
+    border-color: #212121;
+    color: #fff; }
+  [data-background="primary"] .card.card-primary {
+    background: #303f9f;
+    border-color: #303f9f;
+    color: #fff; }
+  [data-background="primary"] .card.card-secondary {
+    background: #7b1fa2;
+    border-color: #7b1fa2;
+    color: #fff; }
+  [data-background="primary"] .card.card-info {
+    background: #0288d1;
+    border-color: #0288d1;
+    color: #fff; }
+  [data-background="primary"] .card.card-success {
+    background: #388e3c;
+    border-color: #388e3c;
+    color: #fff; }
+  [data-background="primary"] .card.card-warning {
+    background: #ffa000;
+    border-color: #ffa000;
+    color: #fff; }
+  [data-background="primary"] .card.card-danger {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: #fff; }

@@ -1,0 +1,19 @@
+.table-widget-10 td {
+  font-size: 0.9rem; }
+  .table-widget-10 td:nth-child(1) {
+    width: 50%;
+    font-weight: normal; }
+  .table-widget-10 td:nth-child(2) {
+    text-align: right; }
+    .table-widget-10 td:nth-child(2) span {
+      margin-left: 10px; }
+    .table-widget-10 td:nth-child(2) .variation {
+      font-size: 0.85rem; }
+
+.table-widget-10 .fa-caret-up,
+.table-widget-10 .variation-up {
+  color: #388e3c; }
+
+.table-widget-10 .fa-caret-down,
+.table-widget-10 .variation-down {
+  color: #d32f2f; }

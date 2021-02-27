@@ -1,0 +1,216 @@
+[data-controller="notifications"][data-view="tooltips"] .tooltips-demo .btn {
+  margin-right: 5px;
+  margin-bottom: 10px; }
+
+.tooltip {
+  transition: opacity 0.3s ease;
+  opacity: 0; }
+  .tooltip.in {
+    opacity: 1; }
+
+[data-background="light"] .tooltip .tooltip-inner {
+  border-radius: 5px;
+  background-color: #212121;
+  color: #ffffff; }
+
+[data-background="light"] .tooltip.tooltip-top .tooltip-inner::before, [data-background="light"] .tooltip.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #212121; }
+
+[data-background="light"] .tooltip.tooltip-right .tooltip-inner::before, [data-background="light"] .tooltip.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #212121; }
+
+[data-background="light"] .tooltip.tooltip-bottom .tooltip-inner::before, [data-background="light"] .tooltip.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #212121; }
+
+[data-background="light"] .tooltip.tooltip-left .tooltip-inner::before, [data-background="light"] .tooltip.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #212121; }
+
+[data-background="dark"] .tooltip .tooltip-inner {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #212121; }
+
+[data-background="dark"] .tooltip.tooltip-top .tooltip-inner::before, [data-background="dark"] .tooltip.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ffffff; }
+
+[data-background="dark"] .tooltip.tooltip-right .tooltip-inner::before, [data-background="dark"] .tooltip.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ffffff; }
+
+[data-background="dark"] .tooltip.tooltip-bottom .tooltip-inner::before, [data-background="dark"] .tooltip.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ffffff; }
+
+[data-background="dark"] .tooltip.tooltip-left .tooltip-inner::before, [data-background="dark"] .tooltip.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ffffff; }
+
+[data-background="primary"] .tooltip .tooltip-inner {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #303f9f; }
+
+[data-background="primary"] .tooltip.tooltip-top .tooltip-inner::before, [data-background="primary"] .tooltip.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ffffff; }
+
+[data-background="primary"] .tooltip.tooltip-right .tooltip-inner::before, [data-background="primary"] .tooltip.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ffffff; }
+
+[data-background="primary"] .tooltip.tooltip-bottom .tooltip-inner::before, [data-background="primary"] .tooltip.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ffffff; }
+
+[data-background="primary"] .tooltip.tooltip-left .tooltip-inner::before, [data-background="primary"] .tooltip.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ffffff; }
+
+.tooltip .tooltip-inner {
+  border-radius: 5px; }
+
+.tooltip .tooltip-light .tooltip-inner {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #fff; }
+
+.tooltip .tooltip-light.tooltip-top .tooltip-inner::before, .tooltip .tooltip-light.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ffffff; }
+
+.tooltip .tooltip-light.tooltip-right .tooltip-inner::before, .tooltip .tooltip-light.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ffffff; }
+
+.tooltip .tooltip-light.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-light.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ffffff; }
+
+.tooltip .tooltip-light.tooltip-left .tooltip-inner::before, .tooltip .tooltip-light.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ffffff; }
+
+.tooltip .tooltip-dark .tooltip-inner {
+  border-radius: 5px;
+  background-color: #212121;
+  color: #fff; }
+
+.tooltip .tooltip-dark.tooltip-top .tooltip-inner::before, .tooltip .tooltip-dark.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #212121; }
+
+.tooltip .tooltip-dark.tooltip-right .tooltip-inner::before, .tooltip .tooltip-dark.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #212121; }
+
+.tooltip .tooltip-dark.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-dark.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #212121; }
+
+.tooltip .tooltip-dark.tooltip-left .tooltip-inner::before, .tooltip .tooltip-dark.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #212121; }
+
+.tooltip .tooltip-default .tooltip-inner {
+  border-radius: 5px;
+  background-color: #212121;
+  color: #fff; }
+
+.tooltip .tooltip-default.tooltip-top .tooltip-inner::before, .tooltip .tooltip-default.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #212121; }
+
+.tooltip .tooltip-default.tooltip-right .tooltip-inner::before, .tooltip .tooltip-default.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #212121; }
+
+.tooltip .tooltip-default.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-default.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #212121; }
+
+.tooltip .tooltip-default.tooltip-left .tooltip-inner::before, .tooltip .tooltip-default.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #212121; }
+
+.tooltip .tooltip-primary .tooltip-inner {
+  border-radius: 5px;
+  background-color: #303f9f;
+  color: #fff; }
+
+.tooltip .tooltip-primary.tooltip-top .tooltip-inner::before, .tooltip .tooltip-primary.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #303f9f; }
+
+.tooltip .tooltip-primary.tooltip-right .tooltip-inner::before, .tooltip .tooltip-primary.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #303f9f; }
+
+.tooltip .tooltip-primary.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-primary.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #303f9f; }
+
+.tooltip .tooltip-primary.tooltip-left .tooltip-inner::before, .tooltip .tooltip-primary.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #303f9f; }
+
+.tooltip .tooltip-secondary .tooltip-inner {
+  border-radius: 5px;
+  background-color: #7b1fa2;
+  color: #fff; }
+
+.tooltip .tooltip-secondary.tooltip-top .tooltip-inner::before, .tooltip .tooltip-secondary.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #7b1fa2; }
+
+.tooltip .tooltip-secondary.tooltip-right .tooltip-inner::before, .tooltip .tooltip-secondary.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #7b1fa2; }
+
+.tooltip .tooltip-secondary.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-secondary.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #7b1fa2; }
+
+.tooltip .tooltip-secondary.tooltip-left .tooltip-inner::before, .tooltip .tooltip-secondary.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #7b1fa2; }
+
+.tooltip .tooltip-info .tooltip-inner {
+  border-radius: 5px;
+  background-color: #0288d1;
+  color: #fff; }
+
+.tooltip .tooltip-info.tooltip-top .tooltip-inner::before, .tooltip .tooltip-info.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #0288d1; }
+
+.tooltip .tooltip-info.tooltip-right .tooltip-inner::before, .tooltip .tooltip-info.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #0288d1; }
+
+.tooltip .tooltip-info.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-info.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #0288d1; }
+
+.tooltip .tooltip-info.tooltip-left .tooltip-inner::before, .tooltip .tooltip-info.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #0288d1; }
+
+.tooltip .tooltip-success .tooltip-inner {
+  border-radius: 5px;
+  background-color: #388e3c;
+  color: #fff; }
+
+.tooltip .tooltip-success.tooltip-top .tooltip-inner::before, .tooltip .tooltip-success.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #388e3c; }
+
+.tooltip .tooltip-success.tooltip-right .tooltip-inner::before, .tooltip .tooltip-success.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #388e3c; }
+
+.tooltip .tooltip-success.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-success.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #388e3c; }
+
+.tooltip .tooltip-success.tooltip-left .tooltip-inner::before, .tooltip .tooltip-success.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #388e3c; }
+
+.tooltip .tooltip-warning .tooltip-inner {
+  border-radius: 5px;
+  background-color: #ffa000;
+  color: #fff; }
+
+.tooltip .tooltip-warning.tooltip-top .tooltip-inner::before, .tooltip .tooltip-warning.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #ffa000; }
+
+.tooltip .tooltip-warning.tooltip-right .tooltip-inner::before, .tooltip .tooltip-warning.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #ffa000; }
+
+.tooltip .tooltip-warning.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-warning.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #ffa000; }
+
+.tooltip .tooltip-warning.tooltip-left .tooltip-inner::before, .tooltip .tooltip-warning.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #ffa000; }
+
+.tooltip .tooltip-danger .tooltip-inner {
+  border-radius: 5px;
+  background-color: #d32f2f;
+  color: #fff; }
+
+.tooltip .tooltip-danger.tooltip-top .tooltip-inner::before, .tooltip .tooltip-danger.bs-tether-element-attached-bottom .tooltip-inner::before {
+  border-top-color: #d32f2f; }
+
+.tooltip .tooltip-danger.tooltip-right .tooltip-inner::before, .tooltip .tooltip-danger.bs-tether-element-attached-left .tooltip-inner::before {
+  border-right-color: #d32f2f; }
+
+.tooltip .tooltip-danger.tooltip-bottom .tooltip-inner::before, .tooltip .tooltip-danger.bs-tether-element-attached-top .tooltip-inner::before {
+  border-bottom-color: #d32f2f; }
+
+.tooltip .tooltip-danger.tooltip-left .tooltip-inner::before, .tooltip .tooltip-danger.bs-tether-element-attached-right .tooltip-inner::before {
+  border-left-color: #d32f2f; }

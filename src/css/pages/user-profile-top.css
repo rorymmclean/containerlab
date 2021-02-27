@@ -1,0 +1,26 @@
+.user-profile-top {
+  position: relative;
+  padding: 20px 20px 0 20px; }
+  .user-profile-top .rounded-circle {
+    width: 100px;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 20px; }
+  .user-profile-top h5 {
+    position: absolute;
+    top: 32px;
+    left: 150px;
+    font-size: 1rem;
+    font-weight: normal; }
+  .user-profile-top p {
+    position: absolute;
+    top: 55px;
+    left: 150px;
+    font-size: 0.8125rem; }
+  .user-profile-top .buttons {
+    position: absolute;
+    top: 82px;
+    left: 150px; }
+    .user-profile-top .buttons .btn {
+      margin-right: 5px;
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }

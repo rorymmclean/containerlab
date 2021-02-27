@@ -1,0 +1,33 @@
+.left-sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1028;
+  opacity: 0;
+  background: #000;
+  transition: opacity 0.25s ease-in-out; }
+  .left-sidebar-backdrop.fade {
+    display: block; }
+  .left-sidebar-backdrop.in {
+    opacity: 0.35; }
+
+.right-sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 1035;
+  opacity: 0;
+  background: #000;
+  transition: opacity 0.25s ease-in-out;
+  background: #fff;
+  opacity: 0; }
+  .right-sidebar-backdrop.fade {
+    display: block; }
+  .right-sidebar-backdrop.in {
+    opacity: 0.35; }

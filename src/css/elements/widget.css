@@ -1,0 +1,36 @@
+.widget {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px; }
+  .widget > .row {
+    margin-bottom: 20px; }
+    .widget > .row:last-child {
+      margin-bottom: 0; }
+  .widget .title {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #212121; }
+  .widget .description {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: #616161; }
+  .widget.dashboard-widget .right-icons > i {
+    color: #616161;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 1.125rem; }
+
+[data-background="light"] .widget {
+  background-color: #ffffff;
+  color: #212121; }
+
+[data-background="dark"] .widget {
+  background-color: #212121;
+  color: #ffffff; }
+
+[data-background="primary"] .widget {
+  background-color: #303f9f;
+  color: #ffffff; }

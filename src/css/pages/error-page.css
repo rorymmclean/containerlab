@@ -1,0 +1,23 @@
+.error-page {
+  width: 500px;
+  padding: 20px;
+  color: #fff;
+  text-align: center; }
+  .error-page h1 {
+    font-size: 128px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; }
+  .error-page h3 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px; }
+  .error-page .btn {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+    .error-page .btn.btn-primary {
+      border: none;
+      background: none; }
+      .error-page .btn.btn-primary:hover, .error-page .btn.btn-primary:active, .error-page .btn.btn-primary:focus, .error-page .btn.btn-primary:visited, .error-page .btn.btn-primary.focus {
+        border: none;
+        background: none; }

@@ -1,0 +1,319 @@
+.nav-tabs-vertical {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  .nav-tabs-vertical .nav-vertical {
+    flex: 0 0 200px; }
+  .nav-tabs-vertical .nav-tabs,
+  .nav-tabs-vertical .tab-content {
+    display: flex;
+    flex-direction: column; }
+  .nav-tabs-vertical .tab-content {
+    padding: 10px 20px;
+    width: 100%; }
+  .nav-tabs-vertical .nav-tabs {
+    margin: 0;
+    border: 0; }
+  .nav-tabs-vertical .nav-item {
+    margin: 0;
+    border: 0;
+    width: 100%; }
+  .nav-tabs-vertical .nav-link {
+    border: 0;
+    position: relative;
+    width: 100%;
+    padding: 10px 15px; }
+    .nav-tabs-vertical .nav-link:after {
+      content: "";
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -3px;
+      height: calc(100%);
+      width: 3px;
+      background-color: #303f9f;
+      z-index: 2; }
+    .nav-tabs-vertical .nav-link.active:after, .nav-tabs-vertical .nav-link:hover:after {
+      display: block;
+      visibility: visible; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-transparent .nav-link {
+  background: #ffffff;
+  color: #212121; }
+  [data-background="light"] .nav-tabs-vertical.nav-tabs-transparent .nav-link.active, [data-background="light"] .nav-tabs-vertical.nav-tabs-transparent .nav-link:hover {
+    background: #ffffff;
+    color: #212121; }
+
+[data-background="light"] .nav-tabs-vertical .nav-link {
+  background: #ffffff;
+  color: #212121; }
+  [data-background="light"] .nav-tabs-vertical .nav-link.active, [data-background="light"] .nav-tabs-vertical .nav-link:hover {
+    background: #ffffff;
+    color: #212121; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="light"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="dark"] .nav-tabs-vertical .nav-link {
+  background: #212121;
+  color: #ffffff; }
+  [data-background="dark"] .nav-tabs-vertical .nav-link.active, [data-background="dark"] .nav-tabs-vertical .nav-link:hover {
+    background: #212121;
+    color: #ffffff; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="dark"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="primary"] .nav-tabs-vertical .nav-link {
+  background: #303f9f;
+  color: #ffffff; }
+  [data-background="primary"] .nav-tabs-vertical .nav-link.active, [data-background="primary"] .nav-tabs-vertical .nav-link:hover {
+    background: #303f9f;
+    color: #ffffff; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="primary"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="secondary"] .nav-tabs-vertical .nav-link {
+  background: #7b1fa2;
+  color: #ffffff; }
+  [data-background="secondary"] .nav-tabs-vertical .nav-link.active, [data-background="secondary"] .nav-tabs-vertical .nav-link:hover {
+    background: #7b1fa2;
+    color: #ffffff; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="secondary"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="info"] .nav-tabs-vertical .nav-link {
+  background: #0288d1;
+  color: #ffffff; }
+  [data-background="info"] .nav-tabs-vertical .nav-link.active, [data-background="info"] .nav-tabs-vertical .nav-link:hover {
+    background: #0288d1;
+    color: #ffffff; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="info"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="success"] .nav-tabs-vertical .nav-link {
+  background: #388e3c;
+  color: #ffffff; }
+  [data-background="success"] .nav-tabs-vertical .nav-link.active, [data-background="success"] .nav-tabs-vertical .nav-link:hover {
+    background: #388e3c;
+    color: #ffffff; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="success"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="warning"] .nav-tabs-vertical .nav-link {
+  background: #ffa000;
+  color: #ffffff; }
+  [data-background="warning"] .nav-tabs-vertical .nav-link.active, [data-background="warning"] .nav-tabs-vertical .nav-link:hover {
+    background: #ffa000;
+    color: #ffffff; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="warning"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }
+
+[data-background="danger"] .nav-tabs-vertical .nav-link {
+  background: #d32f2f;
+  color: #ffffff; }
+  [data-background="danger"] .nav-tabs-vertical .nav-link.active, [data-background="danger"] .nav-tabs-vertical .nav-link:hover {
+    background: #d32f2f;
+    color: #ffffff; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-light .nav-link:after {
+  background-color: #ffffff; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-dark .nav-link:after {
+  background-color: #212121; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-default .nav-link:after {
+  background-color: #212121; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-primary .nav-link:after {
+  background-color: #303f9f; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-secondary .nav-link:after {
+  background-color: #7b1fa2; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-info .nav-link:after {
+  background-color: #0288d1; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-success .nav-link:after {
+  background-color: #388e3c; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-warning .nav-link:after {
+  background-color: #ffa000; }
+
+[data-background="danger"] .nav-tabs-vertical.nav-tabs-danger .nav-link:after {
+  background-color: #d32f2f; }

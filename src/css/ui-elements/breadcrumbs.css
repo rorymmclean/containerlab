@@ -1,0 +1,246 @@
+.breadcrumb {
+  border-radius: 0;
+  white-space: nowrap;
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px 0 0;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row; }
+  .breadcrumb > li {
+    padding: 0; }
+    .breadcrumb > li:before {
+      padding: 0 10px; }
+  .breadcrumb.icon-home > li:first-child:before {
+    font-family: "simple-line-icons";
+    content: "\e069"; }
+  .breadcrumb.icon-grid > li:first-child:before {
+    font-family: "simple-line-icons";
+    content: "\e06a"; }
+  .breadcrumb.icon-angle-right > li + li:before {
+    font-family: FontAwesome;
+    content: "\f105"; }
+  .breadcrumb.icon-angle-double-right > li + li:before {
+    font-family: FontAwesome;
+    content: "\f101"; }
+
+[data-background="light"] .breadcrumb {
+  color: #212121;
+  background-color: #ffffff; }
+  [data-background="light"] .breadcrumb li {
+    color: #212121; }
+    [data-background="light"] .breadcrumb li a {
+      color: #212121; }
+  [data-background="light"] .breadcrumb.transparent, [data-background="light"] .breadcrumb-transparent, [data-background="light"] .breadcrumb.no-bg, [data-background="light"] .breadcrumb-no-bg {
+    background: transparent; }
+  [data-background="light"] .breadcrumb.breadcrumb-light {
+    background: #ffffff;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-light li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-light li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-dark {
+    background: #212121;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-dark li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-dark li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-default {
+    background: #212121;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-default li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-default li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-primary {
+    background: #303f9f;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-primary li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-primary li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-secondary {
+    background: #7b1fa2;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-secondary li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-secondary li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-info {
+    background: #0288d1;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-info li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-info li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-success {
+    background: #388e3c;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-success li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-success li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-warning {
+    background: #ffa000;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-warning li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-warning li a {
+        color: #fff; }
+  [data-background="light"] .breadcrumb.breadcrumb-danger {
+    background: #d32f2f;
+    color: #fff; }
+    [data-background="light"] .breadcrumb.breadcrumb-danger li {
+      color: #fff; }
+      [data-background="light"] .breadcrumb.breadcrumb-danger li a {
+        color: #fff; }
+
+[data-background="dark"] .breadcrumb {
+  color: #ffffff;
+  background-color: #212121; }
+  [data-background="dark"] .breadcrumb li {
+    color: #ffffff; }
+    [data-background="dark"] .breadcrumb li a {
+      color: #ffffff; }
+  [data-background="dark"] .breadcrumb.transparent, [data-background="dark"] .breadcrumb-transparent, [data-background="dark"] .breadcrumb.no-bg, [data-background="dark"] .breadcrumb-no-bg {
+    background: transparent; }
+  [data-background="dark"] .breadcrumb.breadcrumb-light {
+    background: #ffffff;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-light li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-light li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-dark {
+    background: #212121;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-dark li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-dark li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-default {
+    background: #212121;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-default li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-default li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-primary {
+    background: #303f9f;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-primary li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-primary li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-secondary {
+    background: #7b1fa2;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-secondary li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-secondary li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-info {
+    background: #0288d1;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-info li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-info li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-success {
+    background: #388e3c;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-success li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-success li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-warning {
+    background: #ffa000;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-warning li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-warning li a {
+        color: #fff; }
+  [data-background="dark"] .breadcrumb.breadcrumb-danger {
+    background: #d32f2f;
+    color: #fff; }
+    [data-background="dark"] .breadcrumb.breadcrumb-danger li {
+      color: #fff; }
+      [data-background="dark"] .breadcrumb.breadcrumb-danger li a {
+        color: #fff; }
+
+[data-background="primary"] .breadcrumb {
+  color: #ffffff;
+  background-color: #303f9f; }
+  [data-background="primary"] .breadcrumb li {
+    color: #ffffff; }
+    [data-background="primary"] .breadcrumb li a {
+      color: #ffffff; }
+  [data-background="primary"] .breadcrumb.transparent, [data-background="primary"] .breadcrumb-transparent, [data-background="primary"] .breadcrumb.no-bg, [data-background="primary"] .breadcrumb-no-bg {
+    background: transparent; }
+  [data-background="primary"] .breadcrumb.breadcrumb-light {
+    background: #ffffff;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-light li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-light li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-dark {
+    background: #212121;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-dark li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-dark li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-default {
+    background: #212121;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-default li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-default li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-primary {
+    background: #303f9f;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-primary li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-primary li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-secondary {
+    background: #7b1fa2;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-secondary li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-secondary li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-info {
+    background: #0288d1;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-info li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-info li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-success {
+    background: #388e3c;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-success li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-success li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-warning {
+    background: #ffa000;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-warning li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-warning li a {
+        color: #fff; }
+  [data-background="primary"] .breadcrumb.breadcrumb-danger {
+    background: #d32f2f;
+    color: #fff; }
+    [data-background="primary"] .breadcrumb.breadcrumb-danger li {
+      color: #fff; }
+      [data-background="primary"] .breadcrumb.breadcrumb-danger li a {
+        color: #fff; }

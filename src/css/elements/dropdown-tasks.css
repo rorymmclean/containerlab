@@ -1,0 +1,47 @@
+.nav-item-dropdown .navbar-dropdown.dropdown-tasks {
+  width: 400px !important;
+  padding-bottom: 10px; }
+  .nav-item-dropdown .navbar-dropdown.dropdown-tasks .dropdown-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .nav-item-dropdown .navbar-dropdown.dropdown-tasks .dropdown-inner .dropdown-item {
+      flex-direction: column; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-tasks .dropdown-inner .dropdown-item p {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 0; }
+        .nav-item-dropdown .navbar-dropdown.dropdown-tasks .dropdown-inner .dropdown-item p .value {
+          align-self: flex-end;
+          font-weight: normal; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-tasks .dropdown-inner .dropdown-item .progress {
+        margin-top: 10px; }
+
+[data-navbar="light"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #ffffff; }
+
+[data-navbar="dark"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #212121; }
+
+[data-navbar="primary"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #303f9f; }
+
+[data-navbar="secondary"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #7b1fa2; }
+
+[data-navbar="info"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #0288d1; }
+
+[data-navbar="success"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #388e3c; }
+
+[data-navbar="warning"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #ffa000; }
+
+[data-navbar="danger"] .navbar-dropdown.dropdown-tasks .dropdown-item .progress {
+  background-color: #d32f2f; }

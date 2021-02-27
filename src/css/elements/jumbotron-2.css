@@ -1,0 +1,17 @@
+.jumbotron.jumbotron-2 {
+  padding: 20px; }
+  .jumbotron.jumbotron-2 .title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #212121; }
+  .jumbotron.jumbotron-2 .subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #616161; }
+  .jumbotron.jumbotron-2 .breadcrumb {
+    justify-content: flex-end;
+    padding-right: 0; }
+
+[data-background="light"] .jumbotron.jumbotron-2 {
+  background-color: #ffffff;
+  color: #212121; }

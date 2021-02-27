@@ -1,0 +1,13 @@
+.activity-widget-3 .media {
+  margin-bottom: 20px; }
+
+.activity-widget-3 p {
+  font-size: 0.8125rem;
+  margin-bottom: 10px; }
+
+.activity-widget-3 .rounded-circle {
+  border: 3px solid #fff;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  margin-right: 20px; }

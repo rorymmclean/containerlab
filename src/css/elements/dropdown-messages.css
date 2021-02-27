@@ -1,0 +1,20 @@
+.nav-item-dropdown .navbar-dropdown.dropdown-messages {
+  width: 350px !important;
+  padding-bottom: 10px; }
+  .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner .dropdown-item {
+      flex-direction: column; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner .dropdown-item p {
+        margin-bottom: 5px; }
+        .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner .dropdown-item p:last-child {
+          margin-bottom: 0; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner .dropdown-item .badge {
+        margin-right: 10px; }
+      .nav-item-dropdown .navbar-dropdown.dropdown-messages .dropdown-inner .dropdown-item .date {
+        font-size: 0.8rem;
+        font-weight: normal; }

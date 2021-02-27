@@ -1,0 +1,47 @@
+.weather-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  .weather-icons .icon {
+    text-align: center;
+    width: 150px;
+    min-height: 100px;
+    padding: 20px 0;
+    margin-bottom: 20px; }
+    .weather-icons .icon i {
+      margin: 0 5px; }
+    .weather-icons .icon .icons {
+      display: block;
+      margin-bottom: 20px; }
+    .weather-icons .icon .icon-class {
+      display: block;
+      font-size: 13px; }
+
+.wi {
+  font-size: 16px; }
+  .wi.wi-1x {
+    font-size: 16px; }
+  .wi.wi-2x {
+    font-size: 28px; }
+  .wi.wi-3x {
+    font-size: 40px; }
+
+[data-background="light"] .weather-icons .icon {
+  color: #212121; }
+  [data-background="light"] .weather-icons .icon i,
+  [data-background="light"] .weather-icons .icon .icon-class {
+    color: #212121; }
+
+[data-background="dark"] .weather-icons .icon {
+  color: #ffffff; }
+  [data-background="dark"] .weather-icons .icon i,
+  [data-background="dark"] .weather-icons .icon .icon-class {
+    color: #ffffff; }
+
+[data-background="primary"] .weather-icons .icon {
+  color: #ffffff; }
+  [data-background="primary"] .weather-icons .icon i,
+  [data-background="primary"] .weather-icons .icon .icon-class {
+    color: #ffffff; }

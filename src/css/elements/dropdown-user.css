@@ -1,0 +1,19 @@
+.nav-item-dropdown .navbar-dropdown.dropdown-user {
+  margin-left: -200px;
+  width: 240px !important;
+  padding-bottom: 20px; }
+  .nav-item-dropdown .navbar-dropdown.dropdown-user .dropdown-item {
+    width: 240px;
+    display: flex;
+    height: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.85rem; }
+    .nav-item-dropdown .navbar-dropdown.dropdown-user .dropdown-item i {
+      font-size: 1rem;
+      width: 24px;
+      margin-right: 10px; }
+    .nav-item-dropdown .navbar-dropdown.dropdown-user .dropdown-item .title {
+      flex: 1; }

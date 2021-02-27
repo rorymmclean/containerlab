@@ -1,0 +1,6 @@
+.table-widget-1 td {
+  font-size: 0.9rem; }
+  .table-widget-1 td:nth-child(1) {
+    width: 50px; }
+  .table-widget-1 td:nth-child(3), .table-widget-1 td:nth-child(4) {
+    text-align: right; }
