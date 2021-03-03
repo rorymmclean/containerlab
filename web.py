@@ -55,7 +55,8 @@ html_top = """<html>
                data-top-navigation="primary" data-logo="light" data-left-sidebar="light" 
                data-collapsed="false">
                <div class="navbar navbar-2 d-flex justify-content-around align-items-center flex-nowrap display-4">
-                 Poc2Ops Open Source Labs
+                 <div style="width:75px;position:absolute;padding:0px;left:0px;"><a class="flex-nowrap" href="/"><img src="/static/icons/p2c_logo.png" width="100%" height="100%"></a></div>
+                 <div>Poc2Ops Open Source Labs</div>
                </div>
                <div class="top-navigation top-navigation-1 d-flex flex-row justify-content-start align-items-center flex-nowrap h6">
                   <ul class="list-unstyled">
@@ -69,6 +70,9 @@ html_top = """<html>
                   </ul>
                   <ul class="list-unstyled">
                      <li class="list-item"><a class="list-link" href="/stats">Stats</a></li>
+                  </ul>
+                  <ul class="list-unstyled">
+                     <li class="list-item"><a class="list-link" href="/session">Session</a></li>
                   </ul>
                </div>
              </div>
@@ -140,7 +144,11 @@ class StringGenerator(object):
 
 
     @cherrypy.expose
-    def subscriptions(self, app=8):
+    def subscriptions(self):
+        time_page = 'http://localhost:8080/addtime'
+        info_page = 'http://localhost:8080/inforeplay'
+        try: cherrypy.session['mylabs'] 
+        except KeyError: cherrypy.session['mylabs'] = ''
         html_body = """
             <div class="row">
             <div class="col-2">&nbsp;</div>
@@ -148,13 +156,21 @@ class StringGenerator(object):
             <h2 class="text-center">Active Subscriptions</h2>
             <table class="table table-unbordered table-striped thead-inverse">
             <thead><tr><th>ID</th><th>Application</th><th style="text-align:center">Start Time</th>
-            <th style="text-align:center">Duration</th><th style="text-align:center">End Time</th></tr>
+            <th style="text-align:center">Duration</th><th style="text-align:center">End Time</th>
+            <th style="test-aling:center">Actions</th></tr>
             </thead>"""
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('''SELECT id, appname, starttime, default_dur, 
                DATETIME(starttime,"+"||default_dur||" minute") as endtime, DATETIME('now') as nowtime from SUBSCRIPTION;''') 
         for row in r_cursor:
-            html_body = html_body + '<tr><td>'+row[0]+'</td><td>'+str(row[1])+'</td><td style="text-align:center">'+str(row[2])+'</td><td style="text-align:center">'+str(row[3])+'</td><td style="text-align:center">'+str(row[4])+'</td></tr>'                          
+            if cherrypy.session['mylabs'].find(row[0])>=0:
+               action_str ='<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+time_page+'?lab='+str(row[0])+'";''>+Time</button>'
+               action_str = action_str + '<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+info_page+'?lab='+str(row[0])+'";''>Info</button>'
+            else:
+               action_str = ""   
+            html_body = html_body + '<tr><td>'+row[0]+'</td><td>'+str(row[1])+'</td><td style="text-align:center">'+str(row[2])+ \
+                 '</td><td style="text-align:center">'+str(row[3])+'</td><td style="text-align:center">'+str(row[4])+'</td>'+ \
+                 '<td style="text-align:center">'+action_str+'</td></tr>'                          
         html_body = html_body + '</table></div></div>'             
         html_return = html_top + html_body + html_footer
         return html_return
@@ -181,9 +197,53 @@ class StringGenerator(object):
         html_return = html_top + html_body + html_footer
         return html_return
 
+    @cherrypy.expose
+    def session(self): 
+        try: cherrypy.session['mylabs'] 
+        except KeyError: cherrypy.session['mylabs'] = ''       
+        html_body = """
+            <div class="row">
+            <div class="col-4">&nbsp;</div>
+            <div class="col-4 corebody">
+            Labs launched by this session: 
+            """+cherrypy.session['mylabs']+"""
+            </div></div>
+            """
+        html_return = html_top + html_body + html_footer
+        return html_return
 
     @cherrypy.expose
-    def launch(self, app=8):
+    def addtime(self, lab=20):        
+        with sqlite3.connect(DB_STRING) as c:
+            r_cursor = c.execute('''
+            UPDATE SUBSCRIPTION SET default_dur = round((strftime('%s', DATETIME('now',"+60 minute")) - strftime('%s', STARTTIME))/60,0) where id = :var1''',[lab])
+        raise cherrypy.HTTPRedirect("/subscriptions")
+
+    @cherrypy.expose
+    def inforeplay(self, lab=20):        
+        with sqlite3.connect(DB_STRING) as c:
+            r_cursor = c.execute('''SELECT id, appname, starttime, DATETIME(starttime,"+"||default_dur||" minute"), message from SUBSCRIPTION where id = :var1''',[lab])
+        for row in r_cursor:
+            html_core_body = """
+                <h5>Lab: """+row[0]+"""</h5>
+                <h5>Applicaiton Name: """+row[1]+"""</h5>
+                <h5>Start Time: """+row[2]+"""</h5>
+                <h5>Expiration Time: """+row[3]+"""</h5><h5>Previous Message:</h5><hr>
+                """+str(row[4])
+        ### Output Results
+        html_body = """
+            <div class="row">
+            <div class="col-2">&nbsp;</div>
+            <div class="col-8 corebody">"""
+        html_body = html_body + html_core_body 
+        html_body = html_body + "</div></div>"
+        html_return = html_top + html_body + html_footer
+        return html_return
+
+
+    @cherrypy.expose
+    def launch(self, app=10):
+        myHostName = "localhost"
         ### Determine Parameters
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('SELECT id, appname, default_dur, nbr_ports, message from APPS where id = "'+str(app)+'" LIMIT 1;') 
@@ -200,12 +260,17 @@ class StringGenerator(object):
             html_core_body = html_core_body.replace('[PORT'+str(z)+']', str(tp))
         run_name = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k = 6))  
         html_core_body = html_core_body.replace('[NAME]',run_name)
+        html_core_body = html_core_body.replace('localhost',myHostName)
         ### Launch Lab
         lablaunch = subprocess.run(["bash", "runlab.sh", row[0], run_name, port_list[0], port_list[1], port_list[2], port_list[3], port_list[4]], stdout=subprocess.PIPE)
 		### Save Data
         with sqlite3.connect(DB_STRING) as c:
              c.execute('INSERT INTO SUBSCRIPTION(ID, APPNAME, STARTTIME, DEFAULT_DUR, MESSAGE) VALUES (:var1, :var2, datetime("now"), :var4, :var5)',
                        [row[0]+'-'+run_name, row[1], str(row[2]), html_core_body])
+        ### Update Sessions
+        try: cherrypy.session['mylabs'] 
+        except KeyError: cherrypy.session['mylabs'] = ''
+        cherrypy.session['mylabs'] = cherrypy.session['mylabs'] + row[0]+'-'+run_name+','
         ### Output Results
         html_body = """
             <div class="row">

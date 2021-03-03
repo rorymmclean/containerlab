@@ -15,5 +15,6 @@ while True:
 		### Update Table
         with sqlite3.connect(DB_STRING) as c:
              c.execute('DELETE FROM SUBSCRIPTION WHERE ID = :var1',[row[0]])
+             c.commit()
     time.sleep(120)
 
