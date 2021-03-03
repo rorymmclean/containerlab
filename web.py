@@ -6,8 +6,21 @@ import psutil
 import shutil
 import docker
 import sqlite3
+import subprocess
+
 client = docker.from_env()
 DB_STRING = "dockermgr.db"
+
+def check_port(a):
+    checkflag = 'Y'
+    cont_curr = client.containers.list()
+    for row in cont_curr:
+        container = client.containers.get(str(row)[12:-1])
+        ports = container.attrs['NetworkSettings']['Ports']
+        portstr = ports[list(ports.keys())[0]][0]["HostPort"]
+        if portstr == str(a):
+            checkflag='N'  
+    return checkflag
 
 html_top = """<html>
           <head>
@@ -104,6 +117,7 @@ class StringGenerator(object):
         
     @cherrypy.expose
     def labs(self):
+        target_page = 'http://localhost:8080/launch'
         loadrate = float(list(psutil.getloadavg())[1])/float(psutil.cpu_count())
         if loadrate > 1:
             button_flag = 'disabled'
@@ -115,19 +129,18 @@ class StringGenerator(object):
             <div class="col-6 corebody">
             <h2 class="text-center">Available Labs</h2>
             <table class="table table-unbordered table-striped thead-inverse">
-            <thead><tr><th>Lab Name</th><th style="text-align:center">Duration</th>
-            <th style="text-align:center">Launch</th></tr></thead>"""
+            <thead><tr><th style="text-align:center">ID</th><th>Lab Name</th><th style="text-align:center">Launch</th></tr></thead>"""
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('SELECT id, appname, default_dur from APPS;') 
         for row in r_cursor:
-            html_body = html_body + '<tr><td>'+str(row[1])+'</td><td style="text-align:center">'+str(row[2])+'</td><td style="text-align:center"><button class="btn btn-primary btn-rounded" '+button_flag+' app="'+str(row[0])+'">Launch</button></td></tr>'                          
+            html_body = html_body + '<tr><td style="text-align:center">'+str(row[0])+'</td><td>'+str(row[1])+'</td><td style="text-align:center"><button class="btn btn-primary btn-rounded" '+button_flag+' onclick=''window.location.href="'+target_page+'?app='+str(row[0])+'";''>Launch</button></td></tr>'                          
         html_body = html_body + '</table></div></div>' 
         html_return = html_top + html_body + html_footer
         return html_return
 
 
     @cherrypy.expose
-    def subscriptions(self):
+    def subscriptions(self, app=8):
         html_body = """
             <div class="row">
             <div class="col-2">&nbsp;</div>
@@ -165,6 +178,42 @@ class StringGenerator(object):
             <tr><td># Images</td><td>"""+curr_images+"""</td></tr>
             </table></div></div>
             """
+        html_return = html_top + html_body + html_footer
+        return html_return
+
+
+    @cherrypy.expose
+    def launch(self, app=8):
+        ### Determine Parameters
+        with sqlite3.connect(DB_STRING) as c:
+            r_cursor = c.execute('SELECT id, appname, default_dur, nbr_ports, message from APPS where id = "'+str(app)+'" LIMIT 1;') 
+        for row in r_cursor:
+            html_core_body = str(row[4]).replace('[APP]', row[1])                          
+        ### Determine New Ports and New Name
+        port_list = ['']*5
+        for z in range(0,row[3]):
+            myflag = 'N'
+            while myflag == 'N':
+                tp=random.randint(55000,59999)
+                myflag = check_port(tp)
+            port_list[z] = str(tp)
+            html_core_body = html_core_body.replace('[PORT'+str(z)+']', str(tp))
+        run_name = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k = 6))  
+        html_core_body = html_core_body.replace('[NAME]',run_name)
+        ### Launch Lab
+        lablaunch = subprocess.run(["bash", "runlab.sh", row[0], run_name, port_list[0], port_list[1], port_list[2], port_list[3], port_list[4]], stdout=subprocess.PIPE)
+		### Save Data
+        with sqlite3.connect(DB_STRING) as c:
+             c.execute('INSERT INTO SUBSCRIPTION(ID, APPNAME, STARTTIME, DEFAULT_DUR, MESSAGE) VALUES (:var1, :var2, datetime("now"), :var4, :var5)',
+                       [row[0]+'-'+run_name, row[1], str(row[2]), html_core_body])
+        ### Output Results
+        html_body = """
+            <div class="row">
+            <div class="col-2">&nbsp;</div>
+            <div class="col-8 corebody">"""
+        html_body = html_body + html_core_body 
+        html_body = html_body + "</div></div>"
+
         html_return = html_top + html_body + html_footer
         return html_return
 
