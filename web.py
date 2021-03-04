@@ -18,7 +18,9 @@ def check_port(a):
     for row in cont_curr:
         container = client.containers.get(str(row)[12:-1])
         ports = container.attrs['NetworkSettings']['Ports']
-        portstr = ports[list(ports.keys())[0]][0]["HostPort"]
+        portstr = '0'
+        try: portstr = ports[list(ports.keys())[0]][0]["HostPort"]
+        except: NoneType: portstr = '0'
         if portstr == str(a):
             checkflag='N'  
     return checkflag
@@ -337,4 +339,6 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './src'
         }
     }
+    cherrypy.config.update(
+        {'server.socket_host':'0.0.0.0'} )
     cherrypy.quickstart(StringGenerator(), '/', conf)

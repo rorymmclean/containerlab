@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+    mongoLAB01gpZXks:
+        image: poc2opslabs/lab01:latest
+        container_name: Mongo-LAB01gpZXks
+#        environment:
+#            - MONGO_INITDB_ROOT_USERNAME=lab01
+#            - MONGO_INITDB_ROOT_PASSWORD=lab01
+        restart: always    
+        ports:
+            - 59652:27017   
+        #command: --serviceExecutor adaptive  
+        networks: 
+            - LAB01gpZXks   
+    mongo-expressLAB01gpZXks:
+        image: mongo-express
+        container_name: MongoExpress-LAB01gpZXks
+        restart: always
+        environment:
+            - ME_CONFIG_MONGODB_SERVER=mongoLAB01gpZXks
+            - ME_CONFIG_MONGODB_PORT=27017
+#            - ME_CONFIG_MONGODB_ADMINUSERNAME=lab01
+#            - ME_CONFIG_MONGODB_ADMINPASSWORD=lab01
+        depends_on:
+            - mongoLAB01gpZXks
+        ports:
+            - "55141:8081"
+        networks: 
+            - LAB01gpZXks   
+
+networks:
+  LAB01gpZXks:
+    driver: bridge 
+    
+#mongodb://127.0.0.1:27017/?readPreference=primary&gssapiServiceName=mongodb&appname=MongoDB%20Compass&ssl=false    
