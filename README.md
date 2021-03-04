@@ -8,6 +8,7 @@ web.py presents a CherryPy-based web application.
 cleanup.py removes any expired labs every two minutes. 
 
 To add a new lab...
+
 1 The SQLite table app must be updated with the lab #, a template to present to user, and other information. 
 2 A docker compose file named LABxx is placed in the compose folder. This includes strings replaced during the launch. See LAB01 as an example.
 3 A corresponding wiki page (referenced in the template) is required. 
