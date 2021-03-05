@@ -190,6 +190,7 @@ class StringGenerator(object):
         with sqlite3.connect(DB_STRING) as c:
              c.execute('INSERT INTO SUBSCRIPTION(ID, APPNAME, STARTTIME, DEFAULT_DUR, MESSAGE) VALUES (:var1, :var2, datetime("now"), :var4, :var5)',
                        [row[0]+'-'+run_name, row[1], str(row[2]), html_core_body])
+             c.commit()          
         ### Update Sessions
         try: cherrypy.session['mylabs'] 
         except KeyError: cherrypy.session['mylabs'] = ''
@@ -259,6 +260,7 @@ class StringGenerator(object):
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('''
             UPDATE SUBSCRIPTION SET default_dur = round((strftime('%s', DATETIME('now',"+60 minute")) - strftime('%s', STARTTIME))/60,0) where id = :var1''',[mylab])
+            c.commit()
         raise cherrypy.HTTPRedirect("/subscriptions")
         
         
