@@ -64,7 +64,7 @@ html_top = """<html>
                data-collapsed="false">
                <div class="navbar navbar-2 d-flex justify-content-around align-items-center flex-nowrap display-4">
                  <div style="width:75px;position:absolute;padding:0px;left:0px;"><a class="flex-nowrap" href="/"><img src="/static/icons/p2c_logo.png" width="60px" height="60px"></a></div>
-                 <div>Poc2Ops Open Source Labs</div>
+                 <div style="font-size:4vw;">Poc2Ops Open Source Software Labs</div>
                </div>
                <div class="top-navigation top-navigation-1 d-flex flex-row justify-content-start align-items-center flex-nowrap h6">
                   <ul class="list-unstyled">
