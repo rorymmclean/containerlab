@@ -64,7 +64,7 @@ html_top = """<html>
                data-collapsed="false">
                <div class="navbar navbar-2 d-flex justify-content-around align-items-center flex-nowrap display-4">
                  <div style="width:75px;position:absolute;padding:0px;left:0px;"><a class="flex-nowrap" href="/"><img src="/static/icons/p2c_logo.png" width="60px" height="60px"></a></div>
-                 <div style="font-size:4vw;">Poc2Ops Open Source Software Labs</div>
+                 <div style="font-size:3.5vw;">Poc2Ops Open Source Software Labs</div>
                </div>
                <div class="top-navigation top-navigation-1 d-flex flex-row justify-content-start align-items-center flex-nowrap h6">
                   <ul class="list-unstyled">
@@ -126,7 +126,7 @@ class StringGenerator(object):
         target_page = 'http://localhost:8080/launch'
         cherrypy.session['mypad'] = random_string_generator(6, padchars)
         loadrate = float(list(psutil.getloadavg())[1])/float(psutil.cpu_count())
-        if loadrate > 1:
+        if loadrate > 1.4:
             button_flag = 'disabled'
         else:
             button_flag = ''
