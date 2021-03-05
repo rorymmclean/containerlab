@@ -69,7 +69,7 @@ html_top = """<html>
                data-collapsed="false">
                <div class="navbar navbar-2 d-flex justify-content-around align-items-center flex-nowrap display-4">
                  <div style="width:75px;position:absolute;padding:0px;left:0px;"><a class="flex-nowrap" href="/"><img src="/static/icons/p2c_logo.png" width="60px" height="60px"></a></div>
-                 <div style="font-size:3.5vw">Poc2Ops Open Source Software Labs</div>
+                 <div style="font-size:3.5vw;text-shadow: 2px 2px 2px #ababab;">Poc2Ops Open Source Software Labs</div>
                </div>
                <div class="top-navigation top-navigation-1 d-flex flex-row justify-content-start align-items-center flex-nowrap h6">
                   <ul class="list-unstyled">
@@ -132,21 +132,28 @@ class StringGenerator(object):
         cherrypy.session['mypad'] = random_string_generator(6, padchars)
         loadrate = float(list(psutil.getloadavg())[1])/float(psutil.cpu_count())
         if loadrate > 1.4:
-            button_flag = 'disabled'
+            button_flag = 'hidden'
+            load_warning = """
+            <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10 corebody" style="background:#d32f2f;color:#fff;"><h4 style="text-align:center">Due to high load on this server, no additional labs are being launched at this time. Please try again later.</h3>
+            </div></div>
+            """
         else:
-            button_flag = ''
-        html_body = """
+            button_flag = 'visible'
+            load_warning = ""
+        html_body = load_warning + """
             <div class="row">
             <div class="col-3">&nbsp;</div>
             <div class="col-6 corebody">
-            <h2 class="text-center">Available Labs</h2>
+            <h2 class="text-center" style="text-shadow: 2px 2px 2px #ababab;">Available Labs</h2>
             <table class="table table-unbordered table-striped thead-inverse">
             <thead><tr><th style="text-align:center;vertical-align:middle;">ID</th><th style="text-align:center;vertical-align:middle;">Lab Name</th><th style="text-align:center">Launch</th></tr></thead>"""
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('SELECT id, appname, default_dur from APPS;') 
         for row in r_cursor:
             padapp = onetimepad.encrypt(row[0], cherrypy.session['mypad'])
-            html_body = html_body + '<tr><td style="text-align:center;vertical-align:middle;">'+str(row[0])+'</td><td style="text-align:center;vertical-align:middle;">'+str(row[1])+'</td><td style="text-align:center;vertical-align:middle;"><button class="btn btn-primary btn-rounded" '+button_flag+' onclick=''window.location.href="'+target_page+'?app='+padapp+'";''>Launch</button></td></tr>'                          
+            html_body = html_body + '<tr><td style="text-align:center;vertical-align:middle;">'+str(row[0])+'</td><td style="text-align:center;vertical-align:middle;">'+str(row[1])+'</td><td style="text-align:center;vertical-align:middle;"><img src="/static/icons/start_icon.png" style="cursor: pointer; visibility:'+button_flag+';" width="29px" height="29px" onclick=''window.location.href="'+target_page+'?app='+padapp+'";''></td></tr>'                          
         html_body = html_body + '</table></div></div>' 
         html_return = html_top + html_body + html_footer
         return html_return
@@ -210,7 +217,7 @@ class StringGenerator(object):
             <div class="row">
             <div class="col-2">&nbsp;</div>
             <div class="col-8 corebody">
-            <h2 class="text-center">Active Subscriptions</h2>
+            <h2 class="text-center" style="text-shadow: 2px 2px 2px #ababab;">Active Subscriptions</h2>
             <table class="table table-unbordered table-striped thead-inverse">
             <thead><tr><th>ID</th><th style="vertical-align:middle;">Application</th><th style="text-align:center;vertical-align:middle;">Start Time</th>
             <th style="text-align:center;vertical-align:middle;">Duration</th><th style="text-align:center;vertical-align:middle;">End Time</th>
@@ -222,8 +229,8 @@ class StringGenerator(object):
         for row in r_cursor:
             if cherrypy.session['mylabs'].find(row[0])>=0:
                padapp = onetimepad.encrypt(row[0], cherrypy.session['mypad'])
-               action_str ='<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+time_page+'?lab='+padapp+'";''>+Time</button>'
-               action_str = action_str + '<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+info_page+'?lab='+padapp+'";''>Info</button>'
+               action_str ='<img src="/static/icons/add_time.png" style="cursor: pointer;" width="29px" height="29px" onclick=''window.location.href="'+time_page+'?lab='+padapp+'";''>&nbsp;'
+               action_str = action_str + '<img src="/static/icons/info_icon.png" style="cursor: pointer;" width="37px" height="37px" onclick=''window.location.href="'+info_page+'?lab='+padapp+'";''>'
                html_body = html_body + '<tr><td style="vertical-align:middle;">'+row[0]+'</td><td style="text-align:center;vertical-align:middle;">'+ \
                  str(row[1])+'</td><td style="text-align:center;vertical-align:middle;">'+str(row[2])+ \
                  '</td><td style="text-align:center;vertical-align:middle;">'+str(row[3])+ \
