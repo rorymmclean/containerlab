@@ -69,7 +69,7 @@ html_top = """<html>
                data-collapsed="false">
                <div class="navbar navbar-2 d-flex justify-content-around align-items-center flex-nowrap display-4">
                  <div style="width:75px;position:absolute;padding:0px;left:0px;"><a class="flex-nowrap" href="/"><img src="/static/icons/p2c_logo.png" width="60px" height="60px"></a></div>
-                 <div style="font-size:3.5vw;">Poc2Ops Open Source Software Labs</div>
+                 <div style="font-size:3.5vw">Poc2Ops Open Source Software Labs</div>
                </div>
                <div class="top-navigation top-navigation-1 d-flex flex-row justify-content-start align-items-center flex-nowrap h6">
                   <ul class="list-unstyled">
@@ -87,18 +87,18 @@ html_top = """<html>
 
 html_footer = """ 
              <div data-navbar="primary">
-             <div class="navbar navbar-2 justify-content-around align-items-center h6 footer" style="min-height:90px;">
-                 <div style="width: 33%; height: 90%; float:left;">
+             <div class="navbar navbar-2 justify-content-around align-items-center h6 footer">
+                 <div style="width: 33%; float:left;">
                     <b><a href="http://www.poc2ops.com" target="_blank">Poc2Ops.com</a></b><br/>
                     1911 Freedom Drive, Suite 650<br/>
                     Reston, VA  20190
                  </div>
-                 <div style="width: 33%; height: 90%; float:center;">
+                 <div style="width: 33%; float:center;">
                     Email: <a href="mailto:info@poc2ops.com">info@Poc2Ops.com</a><br/>
                     Phone: 443-280-0781<br/>
                     Fax: 703-935-4603
                  </div>
-                 <div style="width: 33%; height: 90%; float:right;">
+                 <div style="width: 33%; float:right;">
                     Poc2Ops can help you implement a <I>Open Source First</I> strategy and gain the benefits available from the world of community developed and supported software.
                  </div>
              </div>
