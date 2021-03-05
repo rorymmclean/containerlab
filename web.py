@@ -8,9 +8,14 @@ import docker
 import sqlite3
 import subprocess
 import onetimepad 
+import configparser
 
 client = docker.from_env()
 DB_STRING = "dockermgr.db"
+
+config = configparser.RawConfigParser()
+config.read('server.cfg')
+myHostName = dict(config.items('SERVER_NAME'))['host']
 
 def check_port(a):
     checkflag = 'Y'
@@ -123,7 +128,7 @@ class StringGenerator(object):
         
     @cherrypy.expose
     def labs(self):
-        target_page = 'http://71.121.243.56:8080/launch'
+        target_page = 'http://'+myHostName+':8080/launch'
         cherrypy.session['mypad'] = random_string_generator(6, padchars)
         loadrate = float(list(psutil.getloadavg())[1])/float(psutil.cpu_count())
         if loadrate > 1.4:
@@ -155,7 +160,6 @@ class StringGenerator(object):
         cherrypy.session['mypad'] = ''
         if myapp[0:3] != 'LAB':
            raise cherrypy.HTTPRedirect("/labs")
-        myHostName = "71.121.243.56"
         ### Determine Parameters
         with sqlite3.connect(DB_STRING) as c:
             r_cursor = c.execute('SELECT id, appname, default_dur, nbr_ports, message from APPS where id = "'+myapp+'" LIMIT 1;') 
@@ -197,8 +201,8 @@ class StringGenerator(object):
 
     @cherrypy.expose
     def subscriptions(self):
-        time_page = 'http://71.121.243.56:8080/addtime'
-        info_page = 'http://71.121.243.56:8080/inforeplay'
+        time_page = 'http://'+myHostName+':8080/addtime'
+        info_page = 'http://'+myHostName+':8080/inforeplay'
         cherrypy.session['mypad'] = random_string_generator(10, padchars)
         try: cherrypy.session['mylabs'] 
         except KeyError: cherrypy.session['mylabs'] = ''
