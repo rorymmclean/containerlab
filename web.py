@@ -220,9 +220,14 @@ class StringGenerator(object):
                padapp = onetimepad.encrypt(row[0], cherrypy.session['mypad'])
                action_str ='<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+time_page+'?lab='+padapp+'";''>+Time</button>'
                action_str = action_str + '<button class="btn btn-primary btn-rounded" onclick=''window.location.href="'+info_page+'?lab='+padapp+'";''>Info</button>'
+               html_body = html_body + '<tr><td style="vertical-align:middle;">'+row[0]+'</td><td style="text-align:center;vertical-align:middle;">'+ \
+                 str(row[1])+'</td><td style="text-align:center;vertical-align:middle;">'+str(row[2])+ \
+                 '</td><td style="text-align:center;vertical-align:middle;">'+str(row[3])+ \
+                 '</td><td style="text-align:center;vertical-align:middle;">'+str(row[4])+'</td>'+ \
+                 '<td style="text-align:center;vertical-align:middle;">'+action_str+'</td></tr>'                          
             else:
                action_str = ""   
-            html_body = html_body + '<tr><td style="vertical-align:middle;">'+row[0]+'</td><td style="text-align:center;vertical-align:middle;">'+ \
+               html_body = html_body + '<tr style="color:#909090"><td style="vertical-align:middle;">'+row[0]+'</td><td style="text-align:center;vertical-align:middle;">'+ \
                  str(row[1])+'</td><td style="text-align:center;vertical-align:middle;">'+str(row[2])+ \
                  '</td><td style="text-align:center;vertical-align:middle;">'+str(row[3])+ \
                  '</td><td style="text-align:center;vertical-align:middle;">'+str(row[4])+'</td>'+ \
