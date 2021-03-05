@@ -99,7 +99,7 @@ html_footer = """
                     Fax: 703-935-4603
                  </div>
                  <div style="width: 33%; float:right;">
-                    Poc2Ops can help you implement a <I>Open Source First</I> strategy and gain the benefits available from the world of community developed and supported software.
+                    Poc2Ops can help you implement an <I>Open Source First</I> strategy and gain the benefits available from the world of community developed and supported software.
                  </div>
              </div>
              </div>  
