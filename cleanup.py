@@ -19,7 +19,7 @@ while True:
              c.commit()
         c.close()     
         ### Kill Lab
-        sys.stdout.write('Removed at: ',datetime.now())
+        sys.stdout.write('Removed at: '+str(datetime.now()))
         lablaunch = subprocess.run(["bash", "killlab.sh", row[0]], stdout=subprocess.PIPE)
         sleep_timer = 10
     time.sleep(sleep_timer)
